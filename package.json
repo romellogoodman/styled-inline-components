@@ -1,0 +1,72 @@
+{
+  "name": "styled-inline-components",
+  "version": "0.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "del lib && rollup -c",
+    "jest": "jest",
+    "lint": "eslint src",
+    "pub": "NODE_ENV=production npm run build && npm publish",
+    "start": "npm run storybook",
+    "storybook": "start-storybook -p 6006",
+    "test": "npm run lint && npm run jest -- --coverage"
+  },
+  "peerDependencies": {
+    "react": "^16.0.0",
+    "styled-components": "^2.2.3"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@storybook/addon-actions": "3.2.14",
+    "@storybook/addon-links": "3.2.14",
+    "@storybook/react": "^3.2.14",
+    "babel-core": "6.25.0",
+    "babel-eslint": "7.2.3",
+    "babel-jest": "21.0.0",
+    "babel-plugin-external-helpers": "6.22.0",
+    "babel-preset-env": "1.6.0",
+    "babel-preset-react": "6.24.1",
+    "babel-preset-stage-0": "6.24.1",
+    "del-cli": "1.1.0",
+    "eslint": "4.1.1",
+    "eslint-plugin-jest": "21.0.0",
+    "eslint-plugin-react": "7.4.0",
+    "jest": "21.0.1",
+    "react": "16.0.0",
+    "react-dom": "16.0.0",
+    "rollup": "0.50.0",
+    "rollup-plugin-babel": "2.7.1",
+    "rollup-plugin-json": "2.3.0",
+    "rollup-plugin-node-resolve": "3.0.0",
+    "rollup-plugin-uglify": "2.0.1",
+    "rollup-watch": "4.3.1",
+    "styled-components": "2.2.3"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "**/src/**/*.{js}",
+      "!**/lib/**/*.{js}",
+      "!**/node_modules/**"
+    ],
+    "coverageReporters": [
+      "text"
+    ],
+    "verbose": true
+  },
+  "author": "Romello Goodman <romellogood@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/romellogood/styled-inline-components.git"
+  },
+  "bugs": {
+    "url": "https://github.com/romellogood/styled-inline-components/issues"
+  },
+  "keywords": [
+    "cssinjs",
+    "react",
+    "styled-components"
+  ],
+  "homepage": "https://github.com/romellogood/styled-inline-components#readme"
+}

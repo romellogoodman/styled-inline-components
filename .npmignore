@@ -1,0 +1,11 @@
+coverage
+node_modules
+src
+tests
+.babelrc
+.eslintignore
+.eslintrc
+.gitignore
+.npmrc
+LICENSE
+rollup.config.js
