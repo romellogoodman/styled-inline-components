@@ -13,9 +13,11 @@
     "__DEBUG__": true,
     "__SERVER__": true
   },
-  "ecmaFeatures": {
-    "jsx": true,
-    "modules": true
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "sourceType": "module"
   },
   "rules": {
     // Possible Errors
@@ -142,7 +144,6 @@
     "eol-last": 2,
     "func-names": 0,
     "func-style": 0,
-    "id-length": [2, {"min": 2, "max": 30, "properties": "always", "exceptions": ["_", "x", "y", "z", "i", "j", "k", "e", "$"]}],
     "id-match": 0,
     "indent": [2, 2, {"SwitchCase": 1, "VariableDeclarator": { "var": 2, "let": 2, "const": 3}}],
     "jsx-quotes": [2, "prefer-single"],
@@ -175,7 +176,6 @@
     "operator-linebreak": [2, "before", { "overrides": { "?": "after", "+=": "none" } }],
     "quote-props": 0,
     "quotes": [2, "single", "avoid-escape"],
-    "require-jsdoc": 2,
     "semi-spacing": [2, {"before": false, "after": true}],
     "semi": [2, "always"],
     "sort-vars": 0,
@@ -197,7 +197,6 @@
     "wrap-regex": 2,
 
     // ES6
-    "arrow-body-style": [2, "always"],
     "arrow-parens": [2, "as-needed"],
     "arrow-spacing": [2, { "before": true, "after": true }],
     "constructor-super": 2,

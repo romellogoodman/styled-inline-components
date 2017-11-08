@@ -1,14 +1,26 @@
-import React from 'react';
 import styled from 'styled-components';
+import domElements from 'styled-components/lib/utils/domElements';
 
-const Paragraph = styled.p`font-size: 28px;`;
+function capitalize (element) {
+  return element.charAt(0).toUpperCase() + element.slice(1);
+}
 
-/**
- * Sample hello world
- * @return {Func} returns nothing
- */
-const HelloWorld = () => {
-  return <Paragraph>hello world</Paragraph>;
-};
+function constructProps (props) {
+  const {chidlren, theme, ...rest} = props;
 
-export default HelloWorld;
+  return Object.keys(props)
+    .map(key => `${key}: ${rest[key]};`)
+    .join('\n');
+}
+
+const Elements = domElements.reduce((result, element) => {
+  result[capitalize(element)] = styled[element]`
+    ${props => {
+    return constructProps(props);
+  }};
+  `;
+
+  return result;
+}, {});
+
+export default Elements;

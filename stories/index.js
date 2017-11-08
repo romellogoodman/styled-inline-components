@@ -1,9 +1,16 @@
 import {storiesOf} from '@storybook/react';
-import {action} from '@storybook/addon-actions';
-import {linkTo} from '@storybook/addon-links';
 import React from 'react';
 
-import HelloWorld from '../src/index';
+import Elements from '../src/index';
 
-storiesOf('HelloWorld', module)
-  .add('to Storybook', () => <HelloWorld />);
+const {Div, P} = Elements;
+
+storiesOf('HelloWorld', module).add('to Storybook', () => {
+  return (
+    <Div padding='20px' color='red'>
+      <P font-weight='bold' font-size='32px'>
+        Hello World
+      </P>
+    </Div>
+  );
+});
