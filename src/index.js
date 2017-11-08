@@ -6,18 +6,16 @@ function capitalize (element) {
 }
 
 function constructProps (props) {
-  const {chidlren, theme, ...rest} = props;
+  const {children, theme, ...rest} = props;
 
-  return Object.keys(props)
+  return Object.keys(rest)
     .map(key => `${key}: ${rest[key]};`)
     .join('\n');
 }
 
 const Elements = domElements.reduce((result, element) => {
   result[capitalize(element)] = styled[element]`
-    ${props => {
-    return constructProps(props);
-  }};
+    ${props => constructProps(props)};
   `;
 
   return result;
