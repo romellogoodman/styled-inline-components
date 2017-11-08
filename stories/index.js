@@ -7,8 +7,8 @@ const {Div, P} = Elements;
 
 storiesOf('HelloWorld', module).add('to Storybook', () => {
   return (
-    <Div padding='20px' color='red'>
-      <P font-weight='bold' font-size='32px'>
+    <Div padding='20px' background='papayawhip' color='palevioletred'>
+      <P font-weight='bold' font-size='48px'>
         Hello World
       </P>
     </Div>
