@@ -5,6 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "del lib && rollup -c",
+    "format": "prettier --write 'src/**/*.js'",
     "jest": "jest",
     "lint": "eslint src",
     "pub": "NODE_ENV=production npm run build && npm publish",
@@ -28,10 +29,18 @@
     "babel-preset-react": "6.24.1",
     "babel-preset-stage-0": "6.24.1",
     "del-cli": "1.1.0",
+    "enzyme": "3.1.1",
+    "enzyme-adapter-react-16": "1.0.4",
+    "enzyme-to-json": "3.2.2",
     "eslint": "4.1.1",
     "eslint-plugin-jest": "21.0.0",
     "eslint-plugin-react": "7.4.0",
+    "fstream": "1.0.11",
     "jest": "21.0.1",
+    "jest-cli": "21.2.1",
+    "jest-styled-components": "4.9.0",
+    "node-pre-gyp": "0.6.39",
+    "prettier": "1.8.1",
     "react": "16.0.0",
     "react-dom": "16.0.0",
     "rollup": "0.50.0",
@@ -41,18 +50,8 @@
     "rollup-plugin-node-resolve": "3.0.0",
     "rollup-plugin-uglify": "2.0.1",
     "rollup-watch": "4.3.1",
-    "styled-components": "2.2.3"
-  },
-  "jest": {
-    "collectCoverageFrom": [
-      "**/src/**/*.{js}",
-      "!**/lib/**/*.{js}",
-      "!**/node_modules/**"
-    ],
-    "coverageReporters": [
-      "text"
-    ],
-    "verbose": true
+    "styled-components": "2.2.3",
+    "tar-pack": "3.4.1"
   },
   "author": "Romello Goodman <romellogood@gmail.com>",
   "license": "MIT",
