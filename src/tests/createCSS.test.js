@@ -1,4 +1,4 @@
-import createCSS from '../utils/createCSS';
+import createCSS from '../createCSS';
 
 describe('capitalize.js', () => {
   it('should create CSS from an object', () => {

@@ -1,4 +1,4 @@
-import capitalize from '../utils/capitalize';
+import capitalize from '../capitalize';
 
 describe('capitalize.js', () => {
   it('should capitalize abc to ABC', () => {

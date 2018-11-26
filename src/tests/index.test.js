@@ -3,8 +3,8 @@ import toJson from 'enzyme-to-json';
 import React from 'react';
 
 import Elements from '../index';
-import capitalize from '../utils/capitalize';
-import domElements from 'styled-components/lib/utils/domElements';
+import capitalize from '../capitalize';
+import domElements from '../domElements';
 
 const {Div} = Elements;
 
@@ -20,7 +20,7 @@ describe('index.js', () => {
   });
 
   it('should correctly apply styles', () => {
-    const wrapper = shallow(<Div font-weight='32px' text-align='center' />);
+    const wrapper = shallow(<Div font-weight="32px" text-align="center" />);
 
     expect(wrapper).toHaveStyleRule('font-weight', '32px');
     expect(wrapper).toHaveStyleRule('text-align', 'center');

@@ -1,11 +1,10 @@
-coverage
+.storybook
 node_modules
 src
-tests
+stories
 .babelrc
-.eslintignore
 .eslintrc
 .gitignore
-.npmrc
+.prettierrc
+jest.config.js
 LICENSE
-rollup.config.js

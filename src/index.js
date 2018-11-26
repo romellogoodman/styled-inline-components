@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import domElements from 'styled-components/lib/utils/domElements';
 
-import capitalize from './utils/capitalize';
-import createCSS from './utils/createCSS';
+import capitalize from './capitalize';
+import createCSS from './createCSS';
+import domElements from './domElements';
 
 const Elements = domElements.reduce((result, element) => {
   result[capitalize(element)] = styled[element]`
